@@ -1,0 +1,67 @@
+@import '/styles/mixins';
+@import '/styles/library';
+
+.MainPage {
+  display: flex;
+}
+
+.Login {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  @extend .p-16;
+  @include mobile() {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_Title {
+    @extend .UI30Semi;
+    @extend .Black;
+    @extend .mt-64;
+    @extend .mb-32;
+  }
+
+  &_Inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & > div:first-child {
+      @extend .mb-16;
+    }
+  }
+
+  &_Btn {
+    width: 100%;
+    @extend .mt-auto;
+  }
+}
+
+.Register {
+  @extend .Login;
+
+  &_Title {
+    @extend .UI30Semi;
+    @extend .Black;
+    @extend .mt-64;
+    @extend .mb-32;
+  }
+
+  &_Inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    & > div {
+      @extend .mb-16;
+    }
+  }
+
+  &_Btn {
+    width: 100%;
+    @extend .mt-auto;
+  }
+}

@@ -1,0 +1,15 @@
+@import '/styles/library';
+
+.Buttons {
+  width: 100%;
+  & > button {
+    background: $greenPrimary;
+    border-radius: 100px;
+    @extend .p-16;
+    border: none;
+    outline: none;
+    @extend .UI16Semi;
+    color: $white;
+    width: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+@mixin beforeMobile {
+  @media (min-width: 0px) and (max-width: 319px) {
+    @content
+  }
+}
+
+@mixin mobile {
+  @media (min-width: 320px) and (max-width: 768px) {
+    @content
+  }
+}
+
+@mixin beMobile {
+  @media (min-width: 0px) and (max-width: 768px) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 769px) and (max-width: 991px) {
+    @content
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 992px) and (max-width: 1200px) {
+    @content
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1201px) {
+    @content
+  }
+}

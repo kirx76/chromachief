@@ -1,0 +1,32 @@
+@import '/styles/library';
+
+.PseudoFooter {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #FAFAFA;
+
+  &_Container {
+    border-top: 1px solid #BDC5CD;
+    padding: 16px 32px;
+  }
+}
+
+.Dot {
+  width: 32px;
+  height: 32px;
+  background-color: $gray2;
+  border-radius: 50%;
+  border: none;
+}
+
+.DotActive {
+  @extend .Dot;
+  background-color: $greenPrimary;
+}
+
+.Dots {
+  display: flex;
+  justify-content: space-between;
+}

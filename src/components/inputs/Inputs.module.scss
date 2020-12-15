@@ -1,0 +1,32 @@
+@import '/styles/library';
+
+.Inputs {
+  position: relative;
+  width: 100%;
+  transition: .2s ease-in-out;
+
+  & input {
+    background: $gray1;
+    border: 1px solid $gray2;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    outline: none;
+    transition: .2s ease-in-out;
+  }
+}
+
+.ShowBtn {
+  position: absolute;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  @extend .UI16Medium;
+  color: $greenPrimary;
+  cursor: pointer;
+  z-index: 1;
+  outline: none;
+  -webkit-appearance: none;
+}
