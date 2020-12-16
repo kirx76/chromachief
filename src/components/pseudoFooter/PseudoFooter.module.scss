@@ -1,5 +1,14 @@
 @import '/styles/library';
 
+.PseudoContainer {
+  width: 100%;
+  height: 100%;
+
+  & > div:first-child {
+    margin-bottom: 80px;
+  }
+}
+
 .PseudoFooter {
   position: fixed;
   left: 0;

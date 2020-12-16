@@ -11,7 +11,7 @@
   justify-content: center;
   width: 100%;
   height: 100vh;
-  @extend .p-16;
+  //@extend .p-16;
   @include mobile() {
     display: flex;
     flex-direction: column;
@@ -43,11 +43,27 @@
 .Register {
   @extend .Login;
 
+  &_Exit {
+    display: flex;
+    align-items: center;
+    @extend .mt-64;
+    @extend .mb-32;
+  }
+
   &_Title {
     @extend .UI30Semi;
     @extend .Black;
     @extend .mt-64;
     @extend .mb-32;
+  }
+
+  &_Login {
+    @extend .UI16Medium;
+    color: $greenPrimary;
+    @extend .mt-64;
+    @extend .mb-32;
+    text-align: right;
+    cursor: pointer;
   }
 
   &_Inputs {

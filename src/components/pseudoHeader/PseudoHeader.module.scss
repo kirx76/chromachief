@@ -1,0 +1,14 @@
+.PseudoHeader {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+
+  &_Left {
+  }
+
+  &_Center {
+  }
+
+  &_Right {
+  }
+}
