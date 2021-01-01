@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import styles from './Post.module.scss';
 import {IPost} from "../../interfaces/post";
 import Link from "next/link";
+import moment from "moment";
 
 export default class Post extends Component<any, any> {
   props!: {
@@ -9,7 +10,7 @@ export default class Post extends Component<any, any> {
   }
 
   render() {
-    const {authorId, description, id, title} = this.props.data
+    const {authorId, description, id, title, publicationDate} = this.props.data
     return (
       <Link href={`/post/${id}`}>
         <div className={styles.Post}>
@@ -24,7 +25,7 @@ export default class Post extends Component<any, any> {
                 <span>{title}</span>
               </div>
               <div className={styles.Post_Right_Head_Time}>
-                <span>8m ago</span>
+                <span>{moment(publicationDate).startOf('minutes').fromNow()}</span>
               </div>
             </div>
             <div className={styles.Post_Right_Body}>

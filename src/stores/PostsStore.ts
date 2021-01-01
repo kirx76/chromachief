@@ -7,6 +7,7 @@ export default class PostsStore {
   client: AxiosInstance;
   getPostById: ((id: number) => Promise<AxiosResponse<IPost>>) & IAction;
   getLastPosts: (() => Promise<AxiosResponse<IPost[]>>) & IAction;
+  createNewPost: ((data: IPost) => Promise<IPost>) & IAction;
 
   // load: ((id) => Promise<AxiosResponse<any>>) & IAction;
 
@@ -24,6 +25,12 @@ export default class PostsStore {
       return this.client
         .get(this.url)
         .then(response => response.data)
+    })
+
+    this.createNewPost = action((data: IPost) => {
+      return this.client
+        .post(this.url, data)
+        .then(r => r.data)
     })
 
     // this.load = action((id) => {

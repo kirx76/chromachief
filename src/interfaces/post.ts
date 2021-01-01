@@ -4,4 +4,5 @@ export interface IPost {
   content?: string;
   description?: string;
   authorId?: number;
+  publicationDate?: Date;
 }

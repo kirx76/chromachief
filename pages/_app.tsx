@@ -6,6 +6,7 @@ import '../styles/globals.css';
 import RootStore from "../src/stores/RootStore";
 import initRootStore from "../src/stores";
 import Cookies from 'cookies';
+import moment from "moment";
 
 class ChromaChief extends App<any, any> {
   rootStore: RootStore | undefined;
@@ -14,6 +15,7 @@ class ChromaChief extends App<any, any> {
     super(props);
     const isServer = typeof window === 'undefined';
     this.rootStore = isServer ? props.initialState : initRootStore(props.initialState);
+    moment.locale('ru');
   }
 
   static async getInitialProps(appContext: any) {
