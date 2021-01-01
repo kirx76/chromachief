@@ -5,13 +5,14 @@ export default class Buttons extends Component<any, any> {
   props: {
     type?: string;
     text?: string;
+    onClick?: ()=>any;
   } | any;
 
   render() {
-    const {text} = this.props
+    const {text, onClick} = this.props
     return (
       <div className={styles.Buttons}>
-        <button>{text}</button>
+        <button onClick={onClick}>{text}</button>
       </div>
     )
   }

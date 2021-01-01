@@ -81,3 +81,16 @@
     @extend .mt-auto;
   }
 }
+
+.News {
+  @extend .Login;
+  height: auto;
+  @extend .py-16;
+
+  &_Title {
+    @extend .UI30Semi;
+    @extend .Black;
+    @extend .mt-64;
+    @extend .mb-32;
+  }
+}

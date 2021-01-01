@@ -24,7 +24,7 @@ export const Dots = (): JSX.Element => {
     <div className={styles.Dots}>
       <Dot active href={'/'}/>
       <Dot href={'/'}/>
-      <Dot href={'/'}/>
+      <Dot href={'/posts'}/>
       <Dot href={'/flow'}/>
       <Dot href={'/profile'}/>
     </div>

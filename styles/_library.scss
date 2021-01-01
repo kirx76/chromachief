@@ -103,6 +103,38 @@ $ff: 'Inter', sans-serif !default;
   color: #000000;
 }
 
+.mx-8 {
+  margin: 0 8px;
+}
+
+.mx-16 {
+  margin: 0 16px;
+}
+
+.mx-32 {
+  margin: 0 32px;
+}
+
+.mx-64 {
+  margin: 0 64px;
+}
+
+.my-8 {
+  margin: 8px 0;
+}
+
+.my-16 {
+  margin: 16px 0;
+}
+
+.my-32 {
+  margin: 32px 0;
+}
+
+.my-64 {
+  margin: 64px 0;
+}
+
 .mb-8 {
   margin-bottom: 8px;
 }
@@ -149,6 +181,38 @@ $ff: 'Inter', sans-serif !default;
 
 .m-64 {
   margin: 64px;
+}
+
+.mr-8 {
+  margin-right: 8px;
+}
+
+.mr-16 {
+  margin-right: 16px;
+}
+
+.mr-32 {
+  margin-right: 32px;
+}
+
+.mr-64 {
+  margin-right: 64px;
+}
+
+.ml-8 {
+  margin-left: 8px;
+}
+
+.ml-16 {
+  margin-left: 16px;
+}
+
+.ml-32 {
+  margin-left: 32px;
+}
+
+.ml-64 {
+  margin-left: 64px;
 }
 
 .pb-8 {
@@ -199,6 +263,38 @@ $ff: 'Inter', sans-serif !default;
   padding: 64px;
 }
 
+.px-8 {
+  padding: 0 8px;
+}
+
+.px-16 {
+  padding: 0 16px;
+}
+
+.px-32 {
+  padding: 0 32px;
+}
+
+.px-64 {
+  padding: 0 64px;
+}
+
+.py-8 {
+  padding: 8px 0;
+}
+
+.py-16 {
+  padding: 16px 0;
+}
+
+.py-32 {
+  padding: 32px 0;
+}
+
+.py-64 {
+  padding: 64px 0;
+}
+
 .mt-auto {
   margin-top: auto;
 }
@@ -219,4 +315,28 @@ $ff: 'Inter', sans-serif !default;
 .mx-auto {
   margin-right: auto;
   margin-left: auto;
+}
+
+.one-line {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+}
+
+.two-line {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+}
+
+.three-line {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
 }

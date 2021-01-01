@@ -1,0 +1,56 @@
+@import '/styles/library';
+@import '/styles/mixins';
+
+.Post {
+  display: flex;
+  width: 100%;
+  @extend .my-8;
+
+  &_Left {
+    @extend .mr-16;
+
+    &_Image {
+      width: 50px;
+      height: 50px;
+
+      & > img {
+        max-width: 50px;
+        height: auto;
+      }
+    }
+  }
+
+  &_Right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &_Head {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      &_Title {
+        @extend .UI16Semi;
+        color: $black;
+      }
+
+      &_Time {
+        @extend .UI14Regular;
+        color: $gray3;
+      }
+    }
+
+    &_Body {
+      @extend .UI14Regular;
+      @extend .mt-8;
+      word-break: break-word;
+      color: $black;
+    }
+
+    &_Divider {
+      border-bottom: 1px solid $gray2;
+      @extend .mt-16;
+    }
+  }
+}

@@ -5,6 +5,9 @@ export default class Inputs extends Component<any, any> {
   props: {
     type?: string;
     placeholder?: string;
+    value?: string;
+    name?: string;
+    onChangeFunc?: () => any;
   } | any;
 
   state: {
@@ -24,28 +27,38 @@ export default class Inputs extends Component<any, any> {
     })
   }
 
-  getInputByType = (type: string, placeholder?: string, isShowed?: boolean): JSX.Element => {
+  getInputByType = (type: string, placeholder?: string, isShowed?: boolean, value?: string, name?: string, onChangeFunc?: () => any): JSX.Element => {
     switch (type) {
       case 'password':
         return <div className={styles.Inputs}>
           {type === 'password' && <span
               onClick={this.toggleShowPassword}
               className={styles.ShowBtn}>Show</span>}
-          <input type={isShowed ? 'text' : type} placeholder={placeholder}/>
+          <input
+            type={isShowed ? 'text' : type}
+            placeholder={placeholder}
+            value={value}
+            name={name}
+            onChange={onChangeFunc}/>
         </div>
       default:
         return <div className={styles.Inputs}>
-          <input type={type} placeholder={placeholder}/>
+          <input
+            type={type}
+            placeholder={placeholder}
+            value={value}
+            name={name}
+            onChange={onChangeFunc}/>
         </div>
     }
   }
 
 
   render() {
-    const {type, placeholder} = this.props!
+    const {type, placeholder, value, name, onChangeFunc} = this.props!
     const {isShowed} = this.state
     return (
-      <>{this.getInputByType(type, placeholder, isShowed)}</>
+      <>{this.getInputByType(type, placeholder, isShowed, value, name, onChangeFunc)}</>
     )
   }
 }
