@@ -3,24 +3,18 @@ import styles from '../styles/home.module.scss';
 import Inputs from "../src/components/inputs";
 import Buttons from "../src/components/buttons";
 import PseudoHeader from "../src/components/pseudoHeader";
-import Link from "next/link";
 import {ILogin} from "../src/interfaces/login";
 import {inject, observer} from "mobx-react";
 import AuthStore from "../src/stores/AuthStore";
-import axios from 'axios';
-import Cookie from "mobx-cookie";
-import PostsStore from "../src/stores/PostsStore";
 import redirectTo from "../src/utils/redirectTo";
 
 
 @inject('authStore')
-@inject('postsStore')
 @observer
 export default class Login extends Component<any, any> {
   state: ILogin
   props!: {
     authStore: AuthStore;
-    postsStore: PostsStore;
   }
 
   constructor(props: any) {
@@ -57,7 +51,7 @@ export default class Login extends Component<any, any> {
   render() {
     const {login, password} = this.state
     return (
-      <div style={{padding: '0 16px 16px 16px'}}>
+      <div className={styles.MainBlock}>
         <div className={styles.Login}>
           <PseudoHeader
             center={<div className={styles.Login_Title}>

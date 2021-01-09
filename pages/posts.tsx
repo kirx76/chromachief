@@ -33,14 +33,16 @@ export default class Posts extends Component<any, any> {
     const {posts} = this.state
     if (posts)
       return (
-        <div className={styles.News}>
-          <PseudoHeader
-            center={<span className={styles.News_Title}>Новости</span>}
-          />
-          <div style={{display: 'flex', flexDirection: 'column', padding: '16px'}}>
-            {posts.map((post: IPost) => {
-              return <Post key={post.id} data={post}/>
-            })}
+        <div className={styles.MainBlock}>
+          <div className={styles.News}>
+            <PseudoHeader
+              center={<span className={styles.News_Title}>Новости</span>}
+            />
+            <div style={{display: 'flex', flexDirection: 'column', padding: '16px', width: '100%'}}>
+              {posts.map((post: IPost) => {
+                return <Post key={post.id} data={post}/>
+              })}
+            </div>
           </div>
         </div>
       )

@@ -2,7 +2,6 @@ import {User} from "../entities/user";
 import {action, observable} from "mobx";
 import {AxiosInstance, AxiosResponse} from "axios";
 import TokenStore from "./TokenStore";
-import {ILogin} from "../interfaces/login";
 
 class AuthStore {
   client: AxiosInstance;
@@ -64,6 +63,23 @@ class AuthStore {
       return this.user
     })
   };
+
+  register(username: string, password: string, email: string): Promise<User | undefined> {
+    const data = {
+      email: email,
+      fullName: username,
+      password: password
+    }
+
+    return this.client
+      .post('/auth/register', data)
+      .then(response => {
+        console.log(response)
+        this.handleAuth(response);
+        this.setUser(response.data)
+        return this.user
+      })
+  }
 
   // registration(phone: string, password: string, first_name: string): Promise<any> {
   //   return this.client.post<User>(
